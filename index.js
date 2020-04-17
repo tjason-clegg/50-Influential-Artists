@@ -207,13 +207,14 @@ const artists = [
 
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
-//console.log(artists[0].name)
-//console.log(artists[2].bio)
+console.log(artists[0].name)
+console.log(artists[2].bio)
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 artists[8].name = "Vincent Van Gogh"
-//console.log(artists[8])
+
+console.log(artists[8])
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -240,7 +241,7 @@ function getArtistByIndex(artists, id) {
  * it will remove Amedeo Modigliani from our dataset.
 */
 function removeArtist(artists, id) {
-    //artists.splice(id)
+    artists.splice(id)
   }
   
   /**
@@ -250,29 +251,32 @@ function removeArtist(artists, id) {
 
 function get20s(data){
   const oldGuys = []
-  let lowEnd = 1800
-  let highEnd = 1900
+  
   for (let i = 0; i < artists.length; i++)
-    if (artists[i].years >= lowEnd){
+    if (artists[i].years >= "1800" && artists[i].years <= "1900"){
       oldGuys.push(artists[i]);
-    } else if(artists[i].years <= highEnd){
-      oldGuys.push(artists[i]);
-    } else {
-
-    }
-  return data();
+    } 
+  return oldGuys;
   }
+/*else if(artists[i].years <= "1900"){
+      oldGuys.push(artists[i]);
+    } 
+
+*/ 
+    
+  console.log(get20s(artists));
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
 function lotsOfArt(artists){
   const paint = [];
-    for (let i = 0; i , artists.length; i++)
+    for (let i = 0; i < artists.length; i++)
       if (artists[i].paintings >= 100) {
-        paint.push(artists[i])
+        paint.push(artists[i]);
       }
   return paint;
 }
-
+console.log(lotsOfArt(artists));
+//artists["paintings" >= "100"
 
 /* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -284,30 +288,39 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
 function addArtist(id, name, years, genre, nationality, bio){
-  id;
-  name = name;
-  years = years;
-  genre = genre;
-  nationality = nationality
-  bio = bio
 
-  artists.push(21, 'Jason Clegg', 1999, 'Web Design', 'Caucasian', 'Just a dude trying to survive through lambda weithout failing to hard. Nothing else really.')
+  let newArtist = {
+    id, name, years, genre, nationality, bio
+  }
+
+  artists.push(newArtist)
 
   return artists
   }
+
+  console.log(addArtist(21, 'Jason Clegg', 1999, 'Web Design', 'Caucasian', 'Just a dude trying to survive through lambda without failing to hard. Nothing else really.'))
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
 function checkArtist(artistname){
-    artistname = `${artist.name}`;
-    if (artistname = artists.includes(`${artist.name}`)){
-      return `${artist.name} is in our database!`
-    } else {
-      return 'Sorry, this artist is not in our database.'
+    console.log(artists);
+    for(let i = 0; i < artists.length; i++){
+      //console.log(artists[i])
+      if (artists[i].name === artistname) {
+        return artistname;
+      }
     }
+
+
+
+    //if (artistname = artists.includes(artistname)){
+     // return `${artistname} is in our database!`
+    //} else {
+     // return 'Sorry, this artist is not in our database!'
+    //}
 
   }
 
-
+console.log(checkArtist("Jeff"))
 
 
 

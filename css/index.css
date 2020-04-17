@@ -86,10 +86,17 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+body {
+  padding: 5rem;
+}
+img:hover {
+  opacity: 80%;
+}
 header {
   display: flex;
   justify-content: center;
   padding: 2rem;
+  color: #4b4848;
 }
 header nav {
   align-items: center;
@@ -97,39 +104,34 @@ header nav {
 }
 .title-container {
   font-size: 3rem;
-  border: 1rem ;
-  widows: 100%;
-  height: 50rem;
+  padding: 15rem;
   margin: 0 auto;
   text-align: center;
   position: relative;
-  background-image: "\assets\home.png";
-  background-origin: border-box;
-  background-color: white;
+  background-image: url("../assets/home.png");
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  display: block;
+}
+.title-container button {
+  width: 15rem;
+  height: 3rem;
+  color: black;
 }
 .artists-container {
   display: flex;
 }
 .artists-container .artist {
   flex-direction: row;
-  width: 50%;
   display: block;
   align-items: center;
+  width: 50%;
+  align-content: center;
+  text-align: center;
+  padding: 2rem;
 }
 .artists-container .artist img {
-  width: 50%;
-  display: block;
-  justify-content: center;
-  padding-left: 10rem;
-}
-.artists-container .artist .bio {
-  padding: 1rem;
-  width: 60%;
-  text-align: center;
-  padding-left: 8rem;
-}
-.artists-container .artist a {
-  flex-wrap: nowrap;
-  text-align: center;
-  padding-left: 13.5rem;
+  width: 95%;
+  height: 22rem;
+  border-radius: 10px;
 }

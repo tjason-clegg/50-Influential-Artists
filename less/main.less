@@ -2,42 +2,44 @@
 .title-container {
     
     font-size:3rem;
-    border: 1rem ;
-    widows: 100%;
-    height: 50rem;
+    padding: 15rem;
     margin:0 auto;
     text-align:center;
     position:relative;
-    background-image:"\assets\home.png";
-    background-origin: border-box;
-    background-color: white;
+    background-image: url("../assets/home.png");
+    background-origin:padding-box;
+    background-repeat: no-repeat;
+    display:block;
+
+    button {
+        width: 15rem;
+        height:3rem;
+        .button(white, 0)
+    }
+    
     }
 
 
 .artists-container{
     display:flex;
+
     .artist{
         flex-direction:row;
-        width:50%;
         display: block;
-         align-items: center;
+        align-items: center;
+        width:50%;
+        align-content: center;
+        text-align:center;
+        padding:2rem;
+        
+        
         img{
-            width:50%;
-            display: block;
-            justify-content: center;
-            padding-left:10rem;
-            
+            width:95%;
+            height:22rem;
+            .roundImg();
         }
-    .bio{
-        padding: 1rem;
-        width:60%;
-        text-align: center;
-        padding-left:8rem;
-    }//This closes bio
-    a {
-    flex-wrap:nowrap;
-    text-align: center;
-    padding-left:13.5rem;
-    }
+
+        
+    
     }//This closes artist
 }//THis closes container
