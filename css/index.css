@@ -1,4 +1,137 @@
-/* Font in design files is Raleway */
-
-/* background-image in Design 👇
- url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg'); */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+body {
+  padding: 5rem;
+}
+img:hover {
+  opacity: 80%;
+}
+header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  color: #4b4848;
+}
+header nav {
+  align-items: center;
+  font-size: 1.8rem;
+}
+.title-container {
+  font-size: 3rem;
+  padding: 15rem;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  background-image: url("../assets/home.png");
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  display: block;
+}
+.title-container button {
+  width: 15rem;
+  height: 3rem;
+  color: black;
+}
+.artists-container {
+  display: flex;
+}
+.artists-container .artist {
+  flex-direction: row;
+  display: block;
+  align-items: center;
+  width: 50%;
+  align-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+.artists-container .artist img {
+  width: 95%;
+  height: 22rem;
+  border-radius: 10px;
+}
